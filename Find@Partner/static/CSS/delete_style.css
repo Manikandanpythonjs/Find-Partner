@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    background-color: rgb(18, 11, 26); 
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.delete-container{
+    max-width: 700px;
+    margin: auto;
+ 
+    padding: 1rem;
+}
+
+.content-delete{
+    
+    box-shadow: 0 0 5px rgb(73, 62, 102);
+    margin-top: 5rem;
+    height: 350px;
+   
+}
+
+.header-delete{
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgba(57, 109, 161, 0.333);
+    padding: .7rem;
+}
+
+.img-back{
+
+    display: flex;
+}
+
+
+
+.header-delete img{
+
+    width: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.header-delete h3{
+
+
+    margin-left: 20px;
+    font-size: 1.4rem;
+    color: cadetblue;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+
+.info-delete{
+
+    padding: 3rem;
+
+
+}
+
+
+.info-delete{
+    margin: 0 auto;
+    
+}
+
+#delete-title{
+    font-size: 1.3rem;
+    color: rgb(18, 107, 180);
+    letter-spacing: 1px;
+}
+
+.info-delete input{
+    
+    margin-top: 10px;
+    text-decoration: none;
+    color: rgb(36, 33, 33);
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    padding: 8px 15px;
+    background-color: #abcdef;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    margin-top: 20px;
+   
+}
+.info-delete  p span{
+
+    color: rgb(206, 50, 50);
+
+}
+
+
+.info-delete input:hover{
+    transition: .3s all ease-in-out;
+    color: #fff;
+    background-color: rgb(171, 205, 239,0.35);
+
+}

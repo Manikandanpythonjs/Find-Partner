@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+
+    background-color: rgb(18, 11, 26); 
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+.container-room-create{
+
+    max-width: 700px;
+    margin: auto;
+ 
+    padding: 1rem;
+
+}
+
+.content-room-create{
+
+      
+    box-shadow: 0 0 5px rgba(42, 42, 53,0.44);
+    margin-top: 1rem;
+    background-color: #3F4156;
+    border-radius: 15px;
+
+}
+
+.header-room-create{
+
+    background-color: #696D97;
+    display: flex;
+    align-items: center;
+    padding: .8rem 0;
+    border-radius:15px 15px 0 0 ;
+
+}
+
+.header-room-create h3{
+    text-transform: uppercase;
+    margin-left: 1rem;
+    color:rgb(255, 255, 255) ;
+
+}
+
+.content-data{
+
+   display: flex;
+   flex-direction: column;
+   padding: 2rem;
+  
+}
+
+.content-data  .all-column-input{
+
+    display: flex;
+    flex-direction: column;
+    padding: .8rem;
+
+}
+
+label{
+    text-transform: capitalize;
+   font-size: 1.3rem;  
+   margin-bottom: 10px; 
+}
+
+input{
+
+    display: block;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: 2px solid rgba(143, 151, 143, 0.4);
+    border-radius: 5px;
+    color: #fbf8f8;
+
+}
+
+input::placeholder {
+    color: rgb(254, 254, 255);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+  
+input:focus {
+    border: 2px solid rgba(227, 231, 235, 0.5);
+}
+
+  
+textarea{
+
+    display: block;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    background-color: transparent;
+    border: 2px solid rgba(143, 151, 143, 0.4);
+    border-radius: 5px;
+    color: #fbf8f8;
+    resize: none;
+}
+
+
+textarea::placeholder {
+    color: rgb(254, 254, 255);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+  
+textarea:focus {
+    border: 2px solid rgba(227, 231, 235, 0.5);
+}
+
+.img-back{
+
+    display: flex;
+}
+
+.header-room-create img{
+
+    width: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.fields-room-create{
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+
+}
+
+
+
+.fields-room-create .create-room-btn{
+    
+
+    border: none;
+    outline: none;    
+    padding: 10px 7px;
+    margin-left: 5px;
+    cursor: pointer;
+    color: #fbf8f8;
+    border-radius: 5px;
+    letter-spacing: 1px;
+
+
+}
+
+.fields-room-create .room-create-field{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+    font-size: 1rem;
+    background-color:  #696D97 ;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+}
+
+
+.fields-room-create .create-field{
+
+    background-color: #575fbb;
+}
+
+.room-create-field:hover{
+    transition: all .5s ease-in-out;
+    background-color: #8e93c5;
+
+}
+.create-field:hover{
+    transition: all .5s ease-in-out;
+    background-color: #595e94;
+
+}
+
+@media  (max-width:678px){
+
+    .content-room-create{
+
+        margin-top: 5rem;
+
+    }
+}

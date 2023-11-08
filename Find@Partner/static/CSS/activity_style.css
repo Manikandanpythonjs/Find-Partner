@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+
+    
+    background-color: rgb(18, 11, 26); 
+    color: rgb(240, 234, 234);
+    font-size: 1rem;
+
+
+}
+
+.activity-container{
+    
+    
+    /* text-align: center; */
+    margin: 20px;
+    
+
+
+}
+
+.content-activity{
+    
+    
+    background-color: rgba(38, 27, 51,0.45);
+    padding-bottom:1rem ;
+    border-radius: 10px;
+    
+    
+   
+    
+
+
+}
+
+
+.activity-header{
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(38, 27, 51,0.90);
+    padding:1rem;
+    border-radius: 10px;
+
+}
+
+.activity-header h3{
+
+    margin-left: 20px;
+    color: rgba(195, 203, 209, 0.8);
+    font-size: 16px;
+}
+
+
+.activity-header img{
+    display: flex;
+    filter: invert(1);
+    width: 20px;
+  
+
+}
+
+.activity-header img:hover{
+    
+    filter: invert(0);
+    
+
+}
+
+.activity-feeds{
+    
+    box-shadow: 0 0 5px rgba(38, 27, 51,0.90);
+    margin: 20px;
+    padding: 1rem;
+    border: 2px solid rgba(79, 76, 83, 0.80);
+    border-radius: 10px;
+    /* max-width: 500px; */
+    
+    
+    
+
+}
+
+/* .activity-feed-header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+
+.action{
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.roomListRoom__author {
+    text-decoration: none;
+    color: #7aa9d8;
+    /* font-size: 19px; */
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-align: center;
+   
+}
+
+
+
+
+#date{
+    font-size: 17px;
+    margin-left: 5px;
+    text-align: center;
+
+}
+
+.replied-post-message{
+
+    margin: 0 auto;
+    padding: 10px;
+    
+}
+
+.replied-post-message #replay{
+    text-align: center;
+    padding: 10px;
+    font-size: 17px;
+
+}
+
+.replied-post-message #message{
+    border-radius: 10px;
+    background-color: rgb(18, 11, 26);
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(79, 76, 83, 0.80);
+
+}
+
+#img-delete{
+
+    display: flex;
+    filter: invert(1);
+    width: 20px;
+}
+
+#img-delete:hover{
+    
+    filter: invert(0);
+    
+
+}
+
+#profile-room-user{
+    text-decoration: none;
+    color: #7aa9d8;
+    margin-left: 10px;
+    font-size: 19px;
+    letter-spacing: 1px;
+
+}
+
+.avatar{
+    
+    display: inline-block;
+    border: 4px solid  #06b463;
+    border-radius:50% ;
+    background-size: 200% 200%;
+    animation: profile-animation 2s linear infinite;
+
+}
+
+
+.avatar img{
+
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+@keyframes profile-animation{
+
+    25%{
+        border: 4px solid  #06b463;
+        background-position: left bottom;
+    }
+
+    50%{
+        border: 4px solid  #057e46;
+        background-position: right bottom;
+    }
+
+    75%{
+        border: 4px solid  #033a20;
+        background-position: right top;
+    }
+    100%{
+        border: 4px solid  #06b463;
+        background-position: left top;
+    }
+
+}
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {%block title%}
+    
+    {%endblock%}
+    <link rel="stylesheet" href="{% static 'utils/fonts.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'utils/assets/css/boxicons.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'CSS/nav_frame_style.css' %}" />
+    
+   
+  
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="toggle-btn">
+        <i class="bx bx-menu bx-md toggle-icon"></i>
+      </div>
+
+      <div class="logo-name-main">Find <span id="heart">@</span> Partner</div>
+
+      <form action="{% url 'home-page' %}" method="GET">
+        <div class="search">
+          <input type="search" placeholder="Search" name="query" />
+          <i class="bx bx-search search-icon"></i>
+        </div>
+      </form>
+
+      
+      
+      <div class="profile-img">
+        <a href="" id="profile-img-user-name">
+          <div class="avatar">
+            <img id="img-avatar" src="{% static 'utils/assets/avatar.svg' %}" alt="logo" >
+          </div>
+        </a>
+
+        <a href="" id="profile-img-user-name"> <p> Hello {{request.user}}</p></a>
+     
+      </div>
+      
+    </header>
+    
+    <div class="navbar-slide">
+      <div class="overlay-navbar"></div>
+
+      <div class="nav-side" id="nav-250">
+        <nav class="navbar">
+          <div class="nav-header">
+            <div class="logo">
+              <i class="bx bx-chat logo-icon"></i>
+            </div>
+
+            <div class="logo-name">
+              <span id="name-logo">Find @ Partner</span>
+            </div>
+          </div>
+
+          <div class="nav-links-content">
+            <a href="{% url 'home-page'  %}" class="nav-link">
+              <i class="bx bx-home nav-icons"></i>
+              <span id="Room" class="nav-name">Home</span>
+            </a>
+
+            <a href="{%  url 'room-page-create' %}" class="nav-link">
+              <i class=" bx bx-door-open nav-icons "></i>
+              <span id="message" class="nav-name">Room</span>
+            </a>
+
+            <a href="" class="nav-link">
+              <i class=" bx bx-message-square-dots nav-icons "></i>
+              <span id="user" class="nav-name">Message</span>
+            </a>
+            <a href="" class="nav-link">
+              <i class=" bx bx-bell  nav-icons"></i>
+              <span id="download" class="nav-name">Notification</span>
+            </a>
+          </div>
+
+          <div class="nav-logout hover-logout">
+            {% if request.user.is_authenticated %}
+            <!-- <a href="{% url 'logout-page' %}">Logout</a> -->
+            <a href="{% url 'logout-page' %}" id="logout-nav">
+            {% else %}
+            <a href="{% url 'login-page' %}">Login</a>
+            {% endif %} 
+           
+            <i class="bx bx-log-out logout-icon hover-logout"></i>
+            <span id="logout-nav-span" class="hover-logout">Logout</span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <script src="{% static 'JS/nav_frame_main.js' %}"></script>
+  </body>
+</html>

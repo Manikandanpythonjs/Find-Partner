@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% if page == 'login' %}
+  <title>Login</title>
+  {%else%}
+  <title>Signup</title>
+  {% endif %}
+  <!-- <link rel="stylesheet" href="//utils/fonts.css"> -->
+  <link rel="stylesheet" href="{% static '/utils/fonts.css' %}" />
+  <link rel="stylesheet" href="{% static '/utils/assets/css/boxicons.min.css' %}" />
+  <link rel="stylesheet" href="{% static '/CSS/login_style.css' %}" />
+</head>
+
+<body>
+  {% if messages %} {% for message in messages %}
+
+  <h3>{{message}}</h3>
+
+  {% endfor %} {%endif%} {% if page == 'login' %}
+
+  <div class="form-container">
+    <form action="" class="form-login" method="POST" autocomplete="off">
+      {% csrf_token %}
+      <div class="header">
+        <h2>Find<span>@</span>Partner</h2>
+        <h4>Login to Your Account</h4>
+      </div>
+
+      <div class="login-content">
+        <input type="text" name="username" placeholder="Username" />
+        <input type="password" name="password" placeholder="Password" />
+        <button type="submit">Login</button>
+      </div>
+
+      <div class="login-links">
+        <a href="" class="forget-password">Forgot Password?</a>
+        <p class="info-no-account">
+          Don't have an account ?
+          <a href="{% url 'signup-page' %}" id="sign-up">Sign up</a>
+        </p>
+      </div>
+    </form>
+  </div>
+  {%else%}
+  <div class="form-container">
+    <form action="" class="form-login" method="POST" autocomplete="off">
+      {% csrf_token %}
+
+      <div class="header">
+        <h2>Find<span>@</span>Partner</h2>
+        <h4>Login to Your Account</h4>
+      </div>
+
+      <div class="login-content">
+        <!-- {{form.as_p}} -->
+
+        {% for fields in form %} {{fields.label}}
+        <!-- <input type="text" name="" placeholder="{{fields.label}}" /> -->
+        {{fields}} {%endfor%}
+
+        <button type="submit">Create My Account</button>
+      </div>
+
+      <div class="login-links">
+        <p class="info-no-account">
+          Have already an account ?
+          <a href="{% url 'login-page' %}" id="sign-up">Sign in</a>
+        </p>
+      </div>
+    </form>
+  </div>
+  {%endif%}
+</body>
+
+</html>
